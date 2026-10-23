@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #111827;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+ 
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+}
+ 
+/* Toppkort */
+ 
+.hero-card,
+.search-card,
+.bento-item {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(17, 24, 39, 0.06);
+}
+ 
+.hero-card {
+    padding: 40px;
+    margin-bottom: 20px;
+}
+ 
+.eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #6b7280;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+ 
+.hero-card h1 {
+    font-size: 48px;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+}
+ 
+.hero-text {
+    font-size: 18px;
+    color: #4b5563;
+    max-width: 700px;
+}
+ 
+/* Søkekort */
+ 
+.search-card {
+    padding: 24px;
+    margin-bottom: 24px;
+}
+ 
+.search-form {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+ 
+.search-form input {
+    flex: 1;
+    min-width: 240px;
+    padding: 16px 18px;
+    border: 1px solid #d1d5db;
+    border-radius: 16px;
+    font-size: 16px;
+    outline: none;
+    background: #f9fafb;
+}
+ 
+.search-form input:focus {
+    border-color: #2563eb;
+    background: #ffffff;
+}
+ 
+.search-form button, #searchBtn {
+    padding: 16px 24px;
+    border: none;
+    border-radius: 16px;
+    background: #111827;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+ 
+.search-form button:hover {
+    background: #1f2937;
+}
+ 
+.error-message {
+    margin-top: 14px;
+    color: #dc2626;
+    font-size: 15px;
+    font-weight: 500;
+}
+ 
+[hidden] {
+    display: none !important;
+}
+ 
+/* Bento grid */
+ 
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+ 
+.bento-item {
+    padding: 24px;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+ 
+.bento-large {
+    grid-column: span 2;
+    grid-row: span 2;
+    min-height: 320px;
+}
+ 
+.bento-wide {
+    grid-column: span 2;
+}
+ 
+.bento-tall {
+    grid-row: span 2;
+    min-height: 220px;
+}
+ 
+/* Innhold i kort */
+ 
+.label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 12px;
+}
+ 
+.bento-item h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #111827;
+    word-break: break-word;
+}
+ 
+.country-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+ 
+.country-main img {
+    width: 180px;
+    max-width: 100%;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+}
+ 
+.country-main-text h2 {
+    font-size: 38px;
+    margin-bottom: 8px;
+    letter-spacing: -0.8px;
+}
+ 
+.official-name {
+    font-size: 18px;
+    color: #4b5563;
+}
+ 
+/* Responsive */
+ 
+@media (max-width: 900px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+ 
+    .bento-large,
+    .bento-wide,
+    .bento-tall {
+        grid-column: span 2;
+        grid-row: span 1;
+        min-height: auto;
+    }
+}
+ 
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 14px 40px;
+    }
+ 
+    .hero-card {
+        padding: 28px 22px;
+    }
+ 
+    .hero-card h1 {
+        font-size: 34px;
+    }
+ 
+    .hero-text {
+        font-size: 16px;
+    }
+ 
+    .search-card {
+        padding: 18px;
+    }
+ 
+    .search-form {
+        flex-direction: column;
+    }
+ 
+    .search-form button {
+        width: 100%;
+    }
+ 
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+ 
+    .bento-large,
+    .bento-wide,
+    .bento-tall {
+        grid-column: span 1;
+    }
+ 
+    .bento-item h3 {
+        font-size: 24px;
+    }
+ 
+    .country-main-text h2 {
+        font-size: 30px;
+    }
+}

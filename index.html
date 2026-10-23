@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landsøk med REST Countries API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="hero-card">
+            <p class="eyebrow">REST COUNTRIES API</p>
+            <h1>Landsøk</h1>
+            <p class="hero-text">
+                Søk etter et land og få opp flagg og nyttig informasjon i et moderne bento grid-oppsett.
+            </p>
+        </header>
+
+        <section class="search-card">
+            <form id="searchForm" class="search-form">
+                <input type="text" id="countryInput" placeholder="Skriv inn et land..." aria-label="Skriv inn et land"
+                    required>
+
+                <!-- <button type="submit" id="searchBtn">Søk</button> -->
+                <input type="button" value="Søk" id="searchBtn">
+
+            </form>
+
+            <p id="errorMessage" class="error-message" hidden>
+                Fant ikke landet. Prøv igjen.
+            </p>
+        </section>
+
+        <section id="countryCard" class="bento-grid">
+
+            <article class="bento-item bento-large country-main">
+                <img id="countryFlag" src="https://flagcdn.com/w320/no.png" alt="Flagget til Norge">
+
+                <div class="country-main-text">
+                    <p class="label">Land</p>
+                    <h2 id="countryName">Norge</h2>
+                    <p id="countryOfficialName" class="official-name">Kongeriket Norge</p>
+                </div>
+            </article>
+
+            <article class="bento-item">
+                <p class="label">Hovedstad</p>
+                <h3 id="capital">Oslo</h3>
+            </article>
+
+            <article class="bento-item">
+                <p class="label">Kontinent</p>
+                <h3 id="continent">Europa</h3>
+            </article>
+
+            <article class="bento-item bento-tall">
+                <p class="label">Innbyggertall</p>
+                <h3 id="population">5 500 000</h3>
+            </article>
+
+            <article class="bento-item">
+                <p class="label">Valuta</p>
+                <h3 id="currency">NOK</h3>
+            </article>
+
+            <article class="bento-item">
+                <p class="label">Språk</p>
+                <h3 id="language">Norsk</h3>
+            </article>
+
+            <article class="bento-item">
+                <p class="label">Areal</p>
+                <h3 id="area">385 207 km²</h3>
+            </article>
+
+            <article class="bento-item bento-wide">
+                <p class="label">Tidssone</p>
+                <h3 id="timezone">UTC+1</h3>
+            </article>
+
+        </section>
+
+    </main>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
